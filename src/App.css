@@ -1,3 +1,132 @@
+/* ───────────────────────────────────
+   전역 스타일 (변경 없음)
+─────────────────────────────────── */
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: #1e1e1e;
+  background-image: url('/public/images/maplestory1.png');
+  background-repeat: no-repeat;
+  background-position: center 85%;
+  background-size: contain;
+  color: #f4f4f4;  /* 연한 회색 텍스트 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ───────────────────────────────────
+   Searchbox 컴포넌트 스타일 (교체된 부분)
+─────────────────────────────────── */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: rgba(44, 44, 44, 0.5);
+  border: 2px solid #00ffc8;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.4); 
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #f7a7a7;  /* 부드러운 핑크 색상으로 수정 */
+  text-shadow: 0 0 8px rgba(0, 255, 200, 0.7); 
+  margin-bottom: 2rem;
+  white-space: nowrap;
+  cursor:pointer;
+}
+
+.heading-icon {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 200, 0.6));
+  margin-right: 0.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border: 2px solid #00ffc8;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input-wrapper input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: transparent;
+  color: #f4f4f4;  /* 연한 회색 텍스트 */
+  border: none;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-wrapper input::placeholder {
+  color: #aaa;
+}
+
+.input-wrapper input:hover,
+.input-wrapper input:focus {
+  border-color: #ff4444;  /* 붉은 색 강조 */
+  box-shadow: 0 0 8px rgba(255,68,68,0.7);
+}
+
+.search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #f4c542;  /* 노란색 텍스트 */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #ff4444;  /* 붉은 색으로 변환 */
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* ───────────────────────────────────
+   반응형 모바일
+─────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    cursor:pointer;
+  }
+  .input-wrapper input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .search-icon {
+    font-size: 1rem;
+    right: 0.8rem;
+  }
+}
+
+/* ───────────────────────────────────
+   나머지 App 관련 스타일 (변경 없음)
+─────────────────────────────────── */
 .App {
   text-align: center;
 }
@@ -5,12 +134,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -21,7 +144,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f4f4f4;  /* 연한 회색 텍스트 */
 }
 
 .App-link {

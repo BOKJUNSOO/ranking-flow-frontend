@@ -1,0 +1,60 @@
+.expbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(26, 26, 26, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
+  }
+  
+  .bar-frame {
+    width: 40px;
+    height: 300px;
+    border: 2px solid #ffaa00;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bar-fill {
+    background-color: yellow;
+    width: 100%;
+    transition: height 1s ease-out;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .bar-fill.overflow {
+    box-shadow: 0 0 20px yellow;
+    background: linear-gradient(yellow, gold);
+  }
+  
+  .percent-label {
+    margin-top: 0.5rem;
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+  
+  .congrats-message {
+    margin-top: 0.8rem;
+    color: #ffde59;
+    font-size: 1.1rem;
+    animation: pulse 1s infinite alternate;
+    text-align: center;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  

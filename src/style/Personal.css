@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.personal-container {
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgba(26, 26, 26, 0.7); /* ✅ 반투명하게 변경 */
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #f0f0f0;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.personal-container h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #00ffc8;
+  margin-bottom: 1.5rem;
+}
+
+/* 테이블 배경을 반투명하게 */
+.personal-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(26, 26, 26, 0.3); /* ✅ 내부 테이블도 반투명 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 각 셀(td)도 살짝 투명하게 */
+.personal-table td {
+  background-color: rgba(26, 26, 26, 0.3); /* ✅ 셀마다 투명도 조정 */
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.personal-table tr:hover td {
+  background-color: rgba(41, 41, 41, 0.8); /* ✅ hover 시 진해짐 */
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+  cursor: pointer;
+}
+
+.personal-table td:first-child {
+  color: #cccccc;
+  width: 50%;
+  font-weight: 500;
+}
+
+.personal-table td:last-child {
+  color: #00ffc8;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Personal 전체 레이아웃 감싸기 */
+.personal-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; /* 자식 요소 높이 맞춤 */
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ExpBar wrapper 위치 및 높이 맞춤 */
+.expbar-wrapper {
+  flex: 0 0 auto;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
