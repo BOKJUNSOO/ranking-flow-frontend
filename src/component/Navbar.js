@@ -1,4 +1,3 @@
-import React from 'react';
 import '../style/Navbar.css'; // CSS 별도 분리
 
 function Navbar({ statuses, selected, onSelectStatus }) {

@@ -2,15 +2,15 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Searchbox from './Searchbox';
 import Personal from './Personal';
+import apiClient from '../api';
 
 function Result() {
   const [user, setUser] = useState();
   const { gameId } = useParams();
 
   const getUser = async () => {
-    const res = await fetch('http://localhost:8080/result/' + gameId);
-    const json = await res.json();
-    setUser(json[0]);
+    const res = await apiClient('http://localhost:8080/result/' + gameId);
+    setUser(res.data[0]);
   };
 
   useEffect(() => {
